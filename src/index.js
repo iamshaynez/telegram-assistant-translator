@@ -1,5 +1,5 @@
 import { translate } from "./translator";
-import { responseToAssistant } from "./util";
+import { responseToAssistant, errorToString } from "./util";
 import { initEnv } from "./env";
 
 export default {
@@ -15,7 +15,7 @@ export default {
             return responseToAssistant(translated);
         } catch (e) {
             console.error(e);
-            return responseToAssistant(JSON.stringify(e, null, 2));
+            return responseToAssistant(errorToString(e));
         }
     },
 };

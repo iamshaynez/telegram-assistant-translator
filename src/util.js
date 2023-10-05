@@ -4,6 +4,7 @@ export function errorToString(e) {
     return JSON.stringify({
         message: e.message,
         stack: e.stack,
+        from: "translator",
     });
 }
 
