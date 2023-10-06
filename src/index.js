@@ -10,7 +10,7 @@ export default {
             const body = await request.json();
             const text = body.message.text;
             console.log(`Text: ${text}`)
-            const translated = await translate(env, text)
+            const translated = await translate(text)
             console.log(`Translated Message: ${translated}`)
             return responseToAssistant(translated);
         } catch (e) {

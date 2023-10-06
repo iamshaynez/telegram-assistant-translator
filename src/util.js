@@ -1,5 +1,3 @@
-
-// 组装错误信息成文本，方便发送
 export function errorToString(e) {
     return JSON.stringify({
         message: e.message,
